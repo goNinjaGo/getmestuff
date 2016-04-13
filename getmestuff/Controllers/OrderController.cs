@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
@@ -72,7 +73,7 @@ namespace getmestuff.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
@@ -123,7 +124,7 @@ namespace getmestuff.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }

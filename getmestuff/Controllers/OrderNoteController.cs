@@ -50,7 +50,7 @@ namespace getmestuff.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
@@ -113,7 +113,7 @@ namespace getmestuff.Controllers
             {
                 db.SaveChanges();
             }
-            catch (DbUpdateConcurrencyException ex)
+            catch (DbUpdateConcurrencyException)
             {
                 return Request.CreateResponse(HttpStatusCode.InternalServerError);
             }
